@@ -18,6 +18,7 @@ const commentRoutes = require("./routes/CommentRoutes");
 const commentLikeRoutes = require("./routes/CommentLikeRoutes");
 const commentRepliesRoutes = require("./routes/CommentRepliesRoutes");
 const followRoutes = require("./routes/FollowRoutes");
+n;
 const conversationRoutes = require("./routes/ConversationRoutes");
 
 //Cookie parser
@@ -26,7 +27,7 @@ server.use(cookieParser());
 //Cors setup
 server.use(
   cors({
-    origin: "*",
+    origin: "https://sage-flan-e06d7e.netlify.app",
     credentials: true,
   })
 );
@@ -51,7 +52,7 @@ server.use("/conversation", conversationRoutes);
 //socketio seperated logic
 const io = new Server(httpServer, {
   cors: {
-    origin: "*",
+    origin: "https://sage-flan-e06d7e.netlify.app",
     credentials: true,
   },
   cookie: true,
