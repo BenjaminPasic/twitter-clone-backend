@@ -27,7 +27,7 @@ server.use(cookieParser());
 //Cors setup
 server.use(
   cors({
-    origin: "https://sage-flan-e06d7e.netlify.app",
+    origin: true,
     credentials: true,
   })
 );
@@ -52,7 +52,7 @@ server.use("/conversation", conversationRoutes);
 //socketio seperated logic
 const io = new Server(httpServer, {
   cors: {
-    origin: "https://sage-flan-e06d7e.netlify.app",
+    origin: true,
     credentials: true,
   },
   cookie: true,
