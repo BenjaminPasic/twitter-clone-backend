@@ -1,4 +1,4 @@
-require("dotenv").config();
+const env = require("dotenv").config();
 const express = require("express");
 const server = express();
 const { createServer } = require("http");
@@ -26,7 +26,7 @@ server.use(cookieParser());
 //Cors setup
 server.use(
   cors({
-    origin: ["http://localhost:3000", process.env.HOST_WEBSITE],
+    origin: "*",
     credentials: true,
   })
 );
@@ -51,7 +51,7 @@ server.use("/conversation", conversationRoutes);
 //socketio seperated logic
 const io = new Server(httpServer, {
   cors: {
-    origin: process.env.HOST_WEBSITE,
+    origin: "*",
     credentials: true,
   },
   cookie: true,
