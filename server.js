@@ -18,7 +18,6 @@ const commentRoutes = require("./routes/CommentRoutes");
 const commentLikeRoutes = require("./routes/CommentLikeRoutes");
 const commentRepliesRoutes = require("./routes/CommentRepliesRoutes");
 const followRoutes = require("./routes/FollowRoutes");
-n;
 const conversationRoutes = require("./routes/ConversationRoutes");
 
 //Cookie parser
