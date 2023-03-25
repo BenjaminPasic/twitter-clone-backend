@@ -59,6 +59,6 @@ const io = new Server(httpServer, {
 
 require("./config/socket-io")(io);
 
-httpServer.listen(process.env.PORT | 3001, () => {
+httpServer.listen(process.env.PORT || 3001, () => {
   console.log("Process running on port:" + PORT);
 });
